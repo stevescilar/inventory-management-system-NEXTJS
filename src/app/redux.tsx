@@ -54,7 +54,7 @@ const rootReducer = combineReducers({
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-/* REDUX STORE */
+/* REDUX STORE Illustrated here */
 export const makeStore = () => {
   return configureStore({
     reducer: persistedReducer,
@@ -74,7 +74,7 @@ export type AppDispatch = AppStore["dispatch"];
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
-/* PROVIDER */
+/* PROVIDER - Persistors */
 export default function StoreProvider({
   children,
 }: {
